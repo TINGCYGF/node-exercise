@@ -9,15 +9,17 @@ const db = {
   read(path = dbPath) {
     return new Promise((resolve, reject) => {
       //读取文件路径
-      fs.readFile(path, {flag: 'a+'}, (error, data)=>{
-        if(error){ return reject(error)}
-          let list;
-          try {
-            list = JSON.parse(data.toString());
-          }catch(error2){
-            list = []
-          }
-          resolve(list)
+      fs.readFile(path, {flag: 'a+'}, (error, data) => {
+        if (error) {
+          return reject(error)
+        }
+        let list;
+        try {
+          list = JSON.parse(data.toString());
+        } catch (error2) {
+          list = []
+        }
+        resolve(list)
       })
     })
   },
@@ -25,8 +27,12 @@ const db = {
     return new Promise((resolve, reject) => {
       const string = JSON.stringify(list);
       //写入文件
-      fs.writeFile(path, string+'\n', (error)=>{
-        if(error) {return reject(error)} else {resolve()}
+      fs.writeFile(path, string + '\n', (error) => {
+        if (error) {
+          return reject(error)
+        } else {
+          resolve()
+        }
       })
     })
   }
