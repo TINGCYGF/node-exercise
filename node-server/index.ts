@@ -40,7 +40,9 @@ server.on('request', (request: IncomingMessage, response: ServerResponse) => {
         response.end('服务器繁忙')
       }
     }else {
-      response.end(data)
+      //返回文件内容
+      response.setHeader('Cache-Control', 'public, max-age=31536000');
+      response.end(data);
     }
   })
 });
