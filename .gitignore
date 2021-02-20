@@ -1,2 +1,4 @@
 *node_modules/
 /.idea/
+fanyi/src/private.ts
+fanyi/idst/
