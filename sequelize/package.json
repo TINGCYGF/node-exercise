@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0",
+    "tedious": "^11.0.4"
+  },
+  "devDependencies": {
+    "@types/sequelize": "^4.28.9"
+  }
+}
