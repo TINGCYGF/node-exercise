@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0"
   }
 }
